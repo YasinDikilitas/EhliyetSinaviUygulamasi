@@ -1,0 +1,41 @@
+PODS:
+  - Bolts/Tasks (1.9.1)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/Kingfisher (1.9.2):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
+  - Kingfisher (6.3.1)
+  - Parse (1.19.2):
+    - Parse/Core (= 1.19.2)
+  - Parse/Core (1.19.2):
+    - Bolts/Tasks (= 1.9.1)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+
+DEPENDENCIES:
+  - ImageSlideshow (~> 1.9.0)
+  - ImageSlideshow/Kingfisher
+  - Parse
+  - SDWebImage (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Bolts
+    - ImageSlideshow
+    - Kingfisher
+    - Parse
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  Parse: 081fb8755c3000fd11df817eec235def233d0af3
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+
+PODFILE CHECKSUM: 448e7683e187de5cac42433f4e3811d436067e9a
+
+COCOAPODS: 1.10.1
