@@ -10,21 +10,78 @@ import Parse
 class MainPageVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var examNameArray = [String]()
+    var examNumberArray = [Int]()
+    var examIdArray = [Int]()
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: nil)
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logOutButtonClicked))
         tableView.delegate = self
         tableView.dataSource = self
+        
+        getData()
     }
     
     
+    @objc func getData() {
+        
+        
+        let query = PFQuery(className: "ExamType")
+        query.addAscendingOrder("ExamNumber")
+        query.whereKey("ExamType", equalTo: "Special")
+        
+        query.findObjectsInBackground { objects, error in
+            
+            
+            if error != nil {
+                self.makeAlert(titleInput: "Hata", messageInput: "Bağlantıda bir hata mevcut")
+                
+            }else {
+                
+                self.examIdArray.removeAll(keepingCapacity: false)
+                self.examNameArray.removeAll(keepingCapacity: false)
+                self.examNumberArray.removeAll(keepingCapacity: false)
+               
+                if objects!.count > 0 {
+                    
+                    for object in objects! {
+                        
+                        self.examIdArray.append(object.object(forKey: "Id") as! Int)
+                        self.examNameArray.append(object.object(forKey: "ExamName") as! String)
+                        self.examNumberArray.append(object.object(forKey: "ExamNumber") as! Int)
+                        
+                    }
+                    
+                    
+                    
+                    
+                }
+                
+                self.tableView.reloadData()
+                
+                
+                
+            }
+            
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 10
+        return examIdArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.textLabel?.text = examNameArray[indexPath.row]
         return cell
         
     }
