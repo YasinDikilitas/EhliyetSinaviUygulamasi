@@ -316,6 +316,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qnD-UV-tUI"/>
                     <connections>
+                        <outlet property="tableView" destination="6ML-wb-oi3" id="lep-gc-aTl"/>
                         <segue destination="CQ6-O5-GXY" kind="presentation" identifier="toSignUpPageVC" modalPresentationStyle="fullScreen" id="ReF-zo-Qw0"/>
                     </connections>
                 </viewController>
@@ -363,7 +364,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k7E-gH-07o"/>
+        <segue reference="ReF-zo-Qw0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cancel" width="399" height="150"/>

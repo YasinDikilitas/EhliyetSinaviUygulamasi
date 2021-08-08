@@ -7,12 +7,26 @@
 
 import UIKit
 import Parse
-class MainPageVC: UIViewController {
+class MainPageVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
        // navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: nil)
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logOutButtonClicked))
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        return cell
+        
     }
     
     @objc func logOutButtonClicked () {
@@ -20,6 +34,10 @@ class MainPageVC: UIViewController {
         self.makeAlert2(titleInput: "Çıkış", messageInput: "Çıkış Yapmak Istediğinize Emin misiniz?")
         
     }
+    
+    
+    
+    
     
     func makeAlert(titleInput : String , messageInput : String) {
         
