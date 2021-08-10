@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3449F3EC26BFFFB70044C594 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449F3EB26BFFFB70044C594 /* QuestionVC.swift */; };
-		3449F3EE26BFFFDF0044C594 /* AnnouncementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449F3ED26BFFFDF0044C594 /* AnnouncementVC.swift */; };
+		3449F3EE26BFFFDF0044C594 /* SubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449F3ED26BFFFDF0044C594 /* SubjectVC.swift */; };
+		34555B4A26C197C500CA81B9 /* LastExamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34555B4926C197C500CA81B9 /* LastExamVC.swift */; };
 		34617FAA26BED7410092C8F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617FA926BED7410092C8F9 /* AppDelegate.swift */; };
 		34617FAC26BED7410092C8F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617FAB26BED7410092C8F9 /* SceneDelegate.swift */; };
 		34617FAE26BED7410092C8F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617FAD26BED7410092C8F9 /* ViewController.swift */; };
@@ -18,7 +19,12 @@
 		3464F0FF26BFCF2A00146E67 /* Pods_EhliyetSınavıHazırlıkUygulaması.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3464F0FE26BFCF2A00146E67 /* Pods_EhliyetSınavıHazırlıkUygulaması.framework */; };
 		3464F10026BFCF2A00146E67 /* Pods_EhliyetSınavıHazırlıkUygulaması.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3464F0FE26BFCF2A00146E67 /* Pods_EhliyetSınavıHazırlıkUygulaması.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3464F10526BFD09000146E67 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464F10426BFD09000146E67 /* MainPageVC.swift */; };
+		346C0D3726C0559A007DBA7F /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346C0D3626C0559A007DBA7F /* DetailsVC.swift */; };
 		34816D5426BFE590009056CE /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34816D5326BFE590009056CE /* ForgotVC.swift */; };
+		34EDDB8426C2CF4400EC36CD /* TrafficSignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDDB8326C2CF4400EC36CD /* TrafficSignVC.swift */; };
+		34EDDB8626C2CFAE00EC36CD /* SignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDDB8526C2CFAE00EC36CD /* SignCell.swift */; };
+		34EDDB9126C2EC6C00EC36CD /* SubjectContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDDB9026C2EC6C00EC36CD /* SubjectContentVC.swift */; };
+		34EDDB9326C2F5D700EC36CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EDDB9226C2F5D700EC36CD /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +44,8 @@
 /* Begin PBXFileReference section */
 		3319585D169ADF69EDBC45D1 /* Pods-EhliyetSınavıHazırlıkUygulaması.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EhliyetSınavıHazırlıkUygulaması.debug.xcconfig"; path = "Target Support Files/Pods-EhliyetSınavıHazırlıkUygulaması/Pods-EhliyetSınavıHazırlıkUygulaması.debug.xcconfig"; sourceTree = "<group>"; };
 		3449F3EB26BFFFB70044C594 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
-		3449F3ED26BFFFDF0044C594 /* AnnouncementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementVC.swift; sourceTree = "<group>"; };
+		3449F3ED26BFFFDF0044C594 /* SubjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVC.swift; sourceTree = "<group>"; };
+		34555B4926C197C500CA81B9 /* LastExamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExamVC.swift; sourceTree = "<group>"; };
 		34617FA626BED7410092C8F9 /* EhliyetSınavıHazırlıkUygulaması.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EhliyetSınavıHazırlıkUygulaması.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34617FA926BED7410092C8F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34617FAB26BED7410092C8F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +61,12 @@
 		3464F0FB26BFCF0600146E67 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3464F0FE26BFCF2A00146E67 /* Pods_EhliyetSınavıHazırlıkUygulaması.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "Pods_EhliyetSınavıHazırlıkUygulaması.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3464F10426BFD09000146E67 /* MainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
+		346C0D3626C0559A007DBA7F /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		34816D5326BFE590009056CE /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
+		34EDDB8326C2CF4400EC36CD /* TrafficSignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficSignVC.swift; sourceTree = "<group>"; };
+		34EDDB8526C2CFAE00EC36CD /* SignCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCell.swift; sourceTree = "<group>"; };
+		34EDDB9026C2EC6C00EC36CD /* SubjectContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectContentVC.swift; sourceTree = "<group>"; };
+		34EDDB9226C2F5D700EC36CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		C4F42A1D4D32E1D9361D04EA /* Pods_EhliyetS_nav_Haz_rl_kUygulamas_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EhliyetS_nav_Haz_rl_kUygulamas_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E78984BDD5AE3A7F5EA933 /* Pods-EhliyetSınavıHazırlıkUygulaması.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EhliyetSınavıHazırlıkUygulaması.release.xcconfig"; path = "Target Support Files/Pods-EhliyetSınavıHazırlıkUygulaması/Pods-EhliyetSınavıHazırlıkUygulaması.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +110,13 @@
 				3464F10426BFD09000146E67 /* MainPageVC.swift */,
 				34816D5326BFE590009056CE /* ForgotVC.swift */,
 				3449F3EB26BFFFB70044C594 /* QuestionVC.swift */,
-				3449F3ED26BFFFDF0044C594 /* AnnouncementVC.swift */,
+				3449F3ED26BFFFDF0044C594 /* SubjectVC.swift */,
+				346C0D3626C0559A007DBA7F /* DetailsVC.swift */,
+				34555B4926C197C500CA81B9 /* LastExamVC.swift */,
+				34EDDB8326C2CF4400EC36CD /* TrafficSignVC.swift */,
+				34EDDB9026C2EC6C00EC36CD /* SubjectContentVC.swift */,
+				34EDDB8526C2CFAE00EC36CD /* SignCell.swift */,
+				34EDDB9226C2F5D700EC36CD /* TabBar.swift */,
 				34617FAF26BED7410092C8F9 /* Main.storyboard */,
 				34617FB226BED7420092C8F9 /* Assets.xcassets */,
 				34617FB426BED7420092C8F9 /* LaunchScreen.storyboard */,
@@ -245,13 +263,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34EDDB9126C2EC6C00EC36CD /* SubjectContentVC.swift in Sources */,
 				34816D5426BFE590009056CE /* ForgotVC.swift in Sources */,
+				34EDDB8626C2CFAE00EC36CD /* SignCell.swift in Sources */,
+				346C0D3726C0559A007DBA7F /* DetailsVC.swift in Sources */,
 				34617FAE26BED7410092C8F9 /* ViewController.swift in Sources */,
 				3449F3EC26BFFFB70044C594 /* QuestionVC.swift in Sources */,
-				3449F3EE26BFFFDF0044C594 /* AnnouncementVC.swift in Sources */,
+				3449F3EE26BFFFDF0044C594 /* SubjectVC.swift in Sources */,
 				34617FAA26BED7410092C8F9 /* AppDelegate.swift in Sources */,
+				34555B4A26C197C500CA81B9 /* LastExamVC.swift in Sources */,
+				34EDDB9326C2F5D700EC36CD /* TabBar.swift in Sources */,
 				3464F10526BFD09000146E67 /* MainPageVC.swift in Sources */,
 				34617FAC26BED7410092C8F9 /* SceneDelegate.swift in Sources */,
+				34EDDB8426C2CF4400EC36CD /* TrafficSignVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,22 +14,28 @@ class MainPageVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var examNameArray = [String]()
     var examNumberArray = [Int]()
     var examIdArray = [Int]()
-    
-    
-    
+   
+    var selectedExamNumber = 0
+    var selectedExamtype = "SpecialExam"
+    var selectedExamName = ""
+   
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: nil)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.organize, target: self, action:  #selector(backseg))
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logOutButtonClicked))
         tableView.delegate = self
         tableView.dataSource = self
-        
+        self.tabBarController?.selectedIndex = tabbarcount.tabBarCount
         getData()
     }
     
+    @objc func backseg (){
+        
+        performSegue(withIdentifier: "toLastExamVC", sender: nil)
+    }
     
     @objc func getData() {
         
@@ -85,6 +91,30 @@ class MainPageVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return cell
         
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.selectedExamNumber = examNumberArray[indexPath.row]
+        self.selectedExamName = examNameArray[indexPath.row]
+        self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+        if segue.identifier == "toDetailsVC" {
+            let  destinationVC = segue.destination as! DetailsVC
+            
+            destinationVC.chosenExamNumber = self.selectedExamNumber
+            destinationVC.chosenExamType = self.selectedExamtype
+            destinationVC.chosenExamName = self.selectedExamName
+            
+            
+        }
+        
+    }
+    
     
     @objc func logOutButtonClicked () {
         
